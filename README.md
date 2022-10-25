@@ -24,4 +24,22 @@ VPC network details:
 Discord Bot:
   Discord Developer Applications:
     Settings / Bot / Privileged Gateway Intents / Message content intent: On
-    Settings / OAuth2 / URL Generator / Scopes: bot, (messeges.read?), (applications.commands?)   
+    Settings / OAuth2 / URL Generator / Scopes: bot, (messeges.read?), (applications.commands?)
+    
+Ephemeral IP:
+  Google Domains:
+    [get your own domain]
+    DNS / Show advanced settings / Manage dynamic DNS:
+      Host name: [subnet]
+      Save
+    Carrot / View credentials:
+      copy username & password
+ VM:
+  sudo apt-get ddclient
+  (during install) program/protocol: googledomains
+  username: [copied]
+  password: [copied]
+  method? doen't matter, we'll change later
+  sudo cd /etc/ddclient.conf
+    remove the method
+    use=cmd, cmd='curl -s ifconfig.me'
