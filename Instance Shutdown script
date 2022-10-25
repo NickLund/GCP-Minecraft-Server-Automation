@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Unique Server Variables
+SCREEN_SOCKNAME = mcs
+MINECRAFT_AUTOMATION_PATH = /home/minecraft/automation/
+
+sudo screen -r $SCREEN_SOCKNAME -X stuff '/stop\n'
+x=1
+while [ ! -z "$x" ]; do x=$(pidof java); done
+sudo rm $MINECRAFT_AUTOMATION_PATHtimer.txt
