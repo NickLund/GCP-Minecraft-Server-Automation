@@ -1,0 +1,8 @@
+# Change your file locations as necessary
+# backup runs every day at 6am
+# saver runs every 5 minutes
+# update runs every 6 hours
+
+0 6 * * * /home/minecraft/automation/backup.sh
+*/5 * * * * /home/minecraft/automation/saver.sh
+0 */6 * * * /home/minecraft/automation/update.py
