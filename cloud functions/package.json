@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@google-cloud/functions-framework": "^2.1.0",
+    "@google-cloud/compute": "3.5.1"
+  }
+}
