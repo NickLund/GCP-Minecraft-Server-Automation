@@ -1,0 +1,13 @@
+# My instance has a mounted drive, which upon startup needs to be mounted.
+# Unique Server Variables
+AUTOMATION_PATH = /home/minecraft/automation/
+MINECRAFT_PATH = /home/minecraft
+SCREEN_SOCKNAME = mcs
+XMS_MEM = 2725M
+XMX_MEM = 2725M
+
+#!/bin/bash
+mount /dev/disk/by-id/google-minecraft-disk /home/minecraft
+python3 $AUTOMATION_PATHstartupUpdate.py
+cd $MINECRAFT_PATH
+screen -d -m -S $SCREEN_SOCKNAME java -Xms$XMS_MEM -Xmx$XMX_MEM -jar minecraft_server.jar nogui
