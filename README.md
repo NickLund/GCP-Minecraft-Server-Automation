@@ -20,3 +20,8 @@ VPC network details:
     Targets:              [minecraft server instance]
     IP ranges:            0.0.0.0/0
     Protocols and Ports:  tcp:25565 #default minecraft port
+
+Discord Bot:
+  Discord Developer Applications:
+    Settings / Bot / Privileged Gateway Intents / Message content intent: On
+    Settings / OAuth2 / URL Generator / Scopes: bot, (messeges.read?), (applications.commands?)   
