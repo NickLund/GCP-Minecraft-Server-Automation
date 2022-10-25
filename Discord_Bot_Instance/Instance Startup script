@@ -1,0 +1,4 @@
+#!/bin/bash
+# Unique Server Variables
+SCREEN_SOCKNAME = bot
+screen -d -m -S $SCREEN_SOCKNAME python3 bot.py
